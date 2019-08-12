@@ -5,3 +5,48 @@
     David Bollmann
 */
 
+:root {
+    --interio-one: #ff9560;
+    --interio-two: #ff5e62;
+    --interio-blue: #77a5ff;
+    --interio-gradient: linear-gradient(120deg, var(--interio-one), var(--interio-two));
+}
+
+body {
+    margin: 0;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 18pt;
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+    scroll-snap-align: center;
+    background: var(--interio-gradient);
+    border-bottom: 0px dashed white;
+}
+
+.footer {
+    background-color: #292929;
+    box-shadow: inset #00000054 0px 5px 10px 0px;
+    height: 6vh;
+    font-size: 14pt;
+    font-weight: 300;
+    text-align: center;
+    color: #d6d6d6;
+}
+
+.footer-container {
+    padding-top: 17px;
+}
+
+.footer-container>i {
+    color: #f3f3f3;
+    padding-left: 6px;
+    padding-right: 6px;
+}
