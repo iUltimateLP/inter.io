@@ -31,19 +31,94 @@ section {
     border-bottom: 0px dashed white;
 }
 
+.navbar {
+	position: fixed;
+	height: 6vh;
+	width: 100%;
+	text-align: center;
+    vertical-align: middle;
+}
+
+.navbar>.container {
+	display: inline-block;
+	padding-top: 16px;
+}
+
+.navbar>.container>.link {
+	float: left;
+	width: 16px;
+	height: 16px;
+	margin-left: 8px;
+	margin-right: 8px;
+	margin-top: 6px;
+	background-color: white;
+	opacity: 0.25;
+	border-radius: 50%;
+}
+
+.navbar>.container>.link.active {
+	opacity: 1;
+}
+
+.navbar>.container>.link.begin {
+	width: 28px;
+	height: 28px;
+	margin-top: 0;
+	background-image: url("../img/interio-logo-large.png");
+	background-size: contain;
+	background-color: transparent;
+	border-radius: 0;
+}
+
+.navbar>.container>.link.end {
+	width: 28px;
+	height: 28px;
+	margin-top: 0;
+	background-image: url("../img/interio-logo-closed-large.png");
+	background-size: contain;
+	background-color: transparent;
+	border-radius: 0;
+}
+
 .page-container {
     width: 100%;
     height: 100%;
 }
 
+.slogan {
+	text-align: center;
+	padding-top: 10%;
+	position: absolute;
+    width: 100%;
+}
+
+h1 {
+	font-family: 'Kaushan Script';
+	font-size: 96pt;
+	font-weight: normal;
+	font-style: normal;
+	text-shadow: 0 4px 4px #00000022;
+	margin: 0;
+	letter-spacing: 0.02em;
+}
+
+h2 {
+	font-family: 'Montserrat';
+	font-size: 24pt;
+	font-weight: 300;
+	font-style: normal;
+	letter-spacing: 0.02em;
+	margin: 0;
+}
+
 .interio-logo {
     background-image: url("../img/interio-logo-large.png");
     width: 100%;
-    height: 100%;
+    height: 256px;
     background-repeat: no-repeat;
-    background-size: 512px 512px;
-    margin: 0 auto;
-    background-position: center;
+    background-size: 256px 256px;
+	background-position: center;
+	padding-top: 70%;
 }
 
 .footer {
