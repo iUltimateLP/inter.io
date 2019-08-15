@@ -197,7 +197,11 @@ h2.page-heading {
     background-repeat: no-repeat;
     background-size: 256px 256px;
     background-position: center;
-    padding-top: 10%;
+	margin: 0;
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .info-container {
@@ -249,12 +253,16 @@ h2.page-heading {
 }
 
 .style-container>.style {
-    border: 2px dashed white;
+    /*border: 2px dashed white;*/
     border-radius: 50%;
     width: 256px;
     height: 256px;
 	padding: 4px;
-	transition: var(--anim-fast) linear transform;
+    transition: var(--anim-fast) linear transform;
+}
+
+.style-container>.style>img {
+    transform: scale(0);
 }
 
 .style-container>.style>.style-img {
@@ -271,7 +279,7 @@ h2.page-heading {
 .style-info-container {
 	width: 100%;
     height: 35%;
-    background-color: #fbfbfb;
+    background-color: #353535;
 	box-shadow: inset #0000003b 0 9px 20px 0px;
 	position: absolute;
 	top: 290%;
@@ -288,14 +296,14 @@ h2.page-heading {
     bottom: 100%;
     border-width: 32px;
     border-style: solid;
-    border-color: transparent transparent #cccccc transparent;
+    border-color: transparent transparent #2b2b2b transparent;
     margin-left: -5px;
 	margin-bottom: -1px;
 	transition: var(--anim-fast) linear left;
 }
 
 .style-info-container>h2 {
-	color: black;
+	color: white;
 	padding-top: 0.5em;
 }
 
@@ -326,4 +334,18 @@ h2.page-heading {
     color: #f3f3f3;
     padding-left: 6px;
     padding-right: 6px;
+}
+
+.progress-ring {
+    position: absolute;
+}
+
+.progress-ring-circle {
+    transition: 0.2s all;
+    /*transform: rotate(-90deg);*/
+    transform-origin: 128px 128px;
+
+    /* High numbers make it invisible */
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
 }

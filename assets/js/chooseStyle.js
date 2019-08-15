@@ -31,3 +31,4 @@ styles.handleStyleClicked = function(index) {
     // Update the arrow offset
     document.getElementById("style-info-container-arrow").style.left = arrowOffset + "px";
 }
+
