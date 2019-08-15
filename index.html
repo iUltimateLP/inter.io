@@ -31,8 +31,9 @@
     <body>
 		<!-- Navbar -->
 		<div class="navbar">
-			<div class="container">
+			<div class="container" id="navbar-container">
 				<div class="link begin active"></div>
+				<div class="link"></div>
 				<div class="link"></div>
 				<div class="link"></div>
 				<div class="link"></div>
@@ -41,7 +42,7 @@
 		</div>
 
 		<!-- Welcome Page -->
-        <section id="pageA">
+        <section id="page0">
             <div class="page-container">
 				<div class="slogan">
 					<h1>inter.io</h1>
@@ -49,13 +50,13 @@
 				</div>
 				<div class="interio-logo"></div>
 				<div class="arrow-container" style="top: 90vh;">
-					<i class="fa fa-chevron-down"></i>
+					<a class="fa fa-chevron-down" href="#page1"></a>
 				</div>
             </div>
 		</section>
 		
 		<!-- Info Page -->
-        <section id="pageB">
+        <section id="page1">
 			<div class="deco-container">
 				<div class="deco-block"></div>
 				<div class="deco-block"></div>
@@ -73,13 +74,13 @@
 					</div>
 				</div>
 				<div class="arrow-container" style="top: 190vh;">
-					<i class="fa fa-chevron-down"></i>
+					<a class="fa fa-chevron-down" href="#page2"></a>
 				</div>
 			</div>
 		</section>
 
 		<!-- Style Selection Page -->
-        <section id="pageC">
+        <section id="page2">
 			<div class="deco-container">
 				<div class="deco-zigzag"></div>
 				<div class="deco-zigzag"></div>
@@ -112,13 +113,13 @@
 					<p id="style-info-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis praesentium similique quis omnis veniam placeat eaque optio nemo eum qui, vel earum perspiciatis, magnam dolor minus aliquid tempora rerum alias?</p>
 				</div>
 				<div class="arrow-container" style="top: 290vh;">
-					<i class="fa fa-chevron-down"></i>
+					<a class="fa fa-chevron-down" href="#page3"></a>
 				</div>
 			</div>
 		</section>
 
 		<!-- Package Selection Page -->
-        <section id="pageD">
+        <section id="page3">
 			<div class="deco-container">
 				<div class="deco-block"></div>
 				<div class="deco-block"></div>
@@ -126,13 +127,13 @@
 			<div class="page-container">
 				<h2 class="page-heading">Pick what you need!</h2>
 				<div class="arrow-container" style="top: 390vh;">
-					<i class="fa fa-chevron-down"></i>
+					<a class="fa fa-chevron-down" href="#page4"></a>
 				</div>
 			</div>
 		</section>
 
 		<!-- Options Selection Page -->
-        <section id="pageE">
+        <section id="page4">
 			<div class="deco-container">
 				<div class="deco-zigzag"></div>
 				<div class="deco-zigzag"></div>
@@ -140,13 +141,13 @@
 			<div class="page-container">
 				<h2 class="page-heading">Want to customize something?</h2>
 				<div class="arrow-container" style="top: 490vh;">
-						<i class="fa fa-chevron-down"></i>
+					<a class="fa fa-chevron-down" href="#page5"></a>
 				</div>
 			</div>
 		</section>
 
 		<!-- Checkout Page -->
-        <section id="pageF">
+        <section id="page5">
 			<div class="deco-container">
 				<div class="deco-block"></div>
 				<div class="deco-block"></div>
@@ -164,5 +165,6 @@
 		<!-- Scripts -->
 		<script src="assets/js/chooseStyle.js"></script>
 		<script src="assets/js/anim.js"></script>
+		<script src="assets/js/main.js"></script>
     </body>
 </html>

@@ -61,6 +61,8 @@ anims.styles = function() {
     // We have three style circles right now
     anims.styleAnimStep(0);
     anims.styleAnimStep(1);
-    anims.styleAnimStep(2);    
+    anims.styleAnimStep(2);
+
+    anims.didAnimateStyles = true;
 }
 

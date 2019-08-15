@@ -35,6 +35,11 @@ section {
     border-bottom: 0px dashed white;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
 .navbar {
 	position: fixed;
 	height: 6vh;
