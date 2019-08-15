@@ -126,6 +126,28 @@
 			</div>
 			<div class="page-container">
 				<h2 class="page-heading">Pick what you need!</h2>
+				<div class="package-container" id="package-container">
+					<div class="package">
+						<img class="package-img" src="assets/img/placeholder.png" onclick="packages.handlePackageClicked(0);">
+						<!--<div class="package-overlay">
+							<i class="fa fa-search"></i>
+						</div>-->
+					</div>
+					<div class="package">
+						<img class="package-img" src="assets/img/placeholder.png" onclick="packages.handlePackageClicked(1);">
+					</div>
+					<div class="package">
+						<img class="package-img" src="assets/img/placeholder.png" onclick="packages.handlePackageClicked(2);">
+					</div>
+					<div class="package">
+						<img class="package-img" src="assets/img/placeholder.png" onclick="packages.handlePackageClicked(3);">
+					</div>
+				</div>
+				<div class="package-info-container" id="package-info-container">
+					<div class="arrow" id="package-info-container-arrow"></div>
+					<h2 id="package-info-name">Style Name</h2>
+					<p id="package-info-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis praesentium similique quis omnis veniam placeat eaque optio nemo eum qui, vel earum perspiciatis, magnam dolor minus aliquid tempora rerum alias?</p>
+				</div>
 				<div class="arrow-container" style="top: 390vh;">
 					<a class="fa fa-chevron-down" href="#page4"></a>
 				</div>
@@ -164,6 +186,7 @@
 		
 		<!-- Scripts -->
 		<script src="assets/js/chooseStyle.js"></script>
+		<script src="assets/js/choosePackage.js"></script>
 		<script src="assets/js/anim.js"></script>
 		<script src="assets/js/main.js"></script>
     </body>
