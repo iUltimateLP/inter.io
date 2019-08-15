@@ -1,0 +1,29 @@
+/*
+    inter.io
+    Gestaltung II Projekt - HS Bremen - Andreas Teufel
+    Jonathan Verbeek
+    David Bollmann
+*/
+
+@media screen and (max-width: 1100px) {
+    .deco-container {
+        display: none;
+    }
+
+    h1 {
+        font-size: 72pt;
+    }
+
+    h2 {
+        font-size: 18pt;
+    }
+
+    .style-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .style-container>.style {
+        width: 200px;
+        height: 200px;
+    }
+}

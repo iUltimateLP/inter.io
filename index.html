@@ -21,13 +21,15 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
 
         <!-- Stylesheets -->
-        <link rel="stylesheet" href="assets/css/main.css">
+		<link rel="stylesheet" href="assets/css/main.css">
+		<link rel="stylesheet" href="assets/css/responsive.css">
 
         <!-- Favicon -->
         <link rel="icon" href="assets/img/interio-logo-large.png">
         <link rel="shortcut icon" href="assets/img/interio-logo-large.png">
     </head>
     <body>
+		<!-- Navbar -->
 		<div class="navbar">
 			<div class="container">
 				<div class="link begin active"></div>
@@ -37,6 +39,8 @@
 				<div class="link end"></div>
 			</div>
 		</div>
+
+		<!-- Welcome Page -->
         <section id="pageA">
             <div class="page-container">
 				<div class="slogan">
@@ -48,7 +52,9 @@
 					<i class="fa fa-chevron-down"></i>
 				</div>
             </div>
-        </section>
+		</section>
+		
+		<!-- Info Page -->
         <section id="pageB">
 			<div class="deco-container">
 				<div class="deco-block"></div>
@@ -62,52 +68,91 @@
 					</div>
 					<div class="right">
 						<p class="info-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident nostrum blanditiis dolore in error ducimus beatae. Assumenda velit excepturi animi nesciunt quo iure aspernatur fugiat, dicta amet! Aliquid, repellendus eligendi!
-							<br/><a href="">Want to know more?</a>
+							<br/><a href="about.html">Want to know more?</a>
 						</p>
 					</div>
 				</div>
 				<div class="arrow-container" style="top: 190vh;">
-						<i class="fa fa-chevron-down"></i>
+					<i class="fa fa-chevron-down"></i>
 				</div>
 			</div>
 		</section>
+
+		<!-- Style Selection Page -->
         <section id="pageC">
 			<div class="deco-container">
-				<div class="deco-block"></div>
-				<div class="deco-block"></div>
+				<div class="deco-zigzag"></div>
+				<div class="deco-zigzag"></div>
 			</div>
 			<div class="page-container">
-				<h2 class="page-heading">Heading</h2>
+				<h2 class="page-heading">Choose a style that fits you.</h2>
+				<div class="style-container" id="style-container">
+					<div class="style">
+						<img class="style-img" src="assets/img/placeholder.png" onclick="styles.handleStyleClicked(0);">
+					</div>
+					<div class="style">
+						<img class="style-img" src="assets/img/placeholder.png" onclick="styles.handleStyleClicked(1);">
+					</div>
+					<div class="style">
+						<img class="style-img" src="assets/img/placeholder.png" onclick="styles.handleStyleClicked(2);">
+					</div>
+				</div>
+				<div class="style-info-container" id="style-info-container">
+					<div class="arrow" id="style-info-container-arrow"></div>
+					<h2 id="style-info-name">Style Name</h2>
+					<p id="style-info-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis praesentium similique quis omnis veniam placeat eaque optio nemo eum qui, vel earum perspiciatis, magnam dolor minus aliquid tempora rerum alias?</p>
+				</div>
 				<div class="arrow-container" style="top: 290vh;">
-						<i class="fa fa-chevron-down"></i>
+					<i class="fa fa-chevron-down"></i>
 				</div>
 			</div>
 		</section>
+
+		<!-- Package Selection Page -->
         <section id="pageD">
 			<div class="deco-container">
 				<div class="deco-block"></div>
 				<div class="deco-block"></div>
 			</div>
 			<div class="page-container">
-				<h2 class="page-heading">Heading</h2>
+				<h2 class="page-heading">Pick what you need!</h2>
 				<div class="arrow-container" style="top: 390vh;">
+					<i class="fa fa-chevron-down"></i>
+				</div>
+			</div>
+		</section>
+
+		<!-- Options Selection Page -->
+        <section id="pageE">
+			<div class="deco-container">
+				<div class="deco-zigzag"></div>
+				<div class="deco-zigzag"></div>
+			</div>
+			<div class="page-container">
+				<h2 class="page-heading">Want to customize something?</h2>
+				<div class="arrow-container" style="top: 490vh;">
 						<i class="fa fa-chevron-down"></i>
 				</div>
 			</div>
 		</section>
-        <section id="pageE">
+
+		<!-- Checkout Page -->
+        <section id="pageF">
 			<div class="deco-container">
 				<div class="deco-block"></div>
 				<div class="deco-block"></div>
 			</div>
 			<div class="page-container">
-				<h2 class="page-heading">Heading</h2>
-				<div class="footer" style="top: 494vh;">
+				<h2 class="page-heading">Got everything?</h2>
+				<div class="footer" style="top: 594vh;">
 					<div class="footer-container">
 						<i class="fa fa-code"></i>  with  <i class="fa fa-heart"></i>  in Bremen
 					</div>
 				</div>
 			</div>
-        </section>
+		</section>
+		
+		<!-- Scripts -->
+		<script src="assets/js/chooseStyle.js"></script>
     </body>
 </html>
