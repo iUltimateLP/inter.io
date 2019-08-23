@@ -34,7 +34,8 @@
 .style-container>.style>.style-img {
 	width: inherit;
 	height: inherit;
-	border-radius: inherit;
+    border-radius: inherit;
+    box-shadow: #00000014 0px 7px 13px 0px;
 }
 
 .style-container>.style:hover {
