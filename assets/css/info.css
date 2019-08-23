@@ -1,0 +1,62 @@
+/*
+    inter.io
+    Gestaltung II Projekt - HS Bremen - Andreas Teufel
+    Jonathan Verbeek
+    David Bollmann
+*/
+
+.interio-logo {
+    background-image: url(../img/interio-logo-large.png);
+    width: 100%;
+    height: 256px;
+    background-repeat: no-repeat;
+    background-size: 256px 256px;
+    background-position: center;
+	margin: 0;
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.slogan {
+	text-align: center;
+	padding-top: 10%;
+	/*position: absolute;*/
+    width: 100%;
+}
+
+.info-container {
+    justify-content: center;
+    display: flex;
+    padding-top: 8%;
+}
+
+.info-container>.left {
+    float: left;
+    padding-right: 2%;
+}
+
+.info-container>.right {
+    float: right;
+    max-width: 512px;
+}
+
+.info-img {
+	width: 512px;
+	height: 512px;
+	border: 1px solid white;
+}
+
+.info-text {
+	text-align: justify;
+    font-size: 12pt;
+    font-weight: 300;
+    margin: 0;
+    color: #ffffff;
+}
+
+.info-text>a {
+	color: #ffffff;
+    font-weight: 500;
+}
