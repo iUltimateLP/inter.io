@@ -160,6 +160,16 @@ a {
     bottom: -35%;
 }
 
+.deco-container>.paper-plane {
+    background-image: url(../img/paper-plane.svg);
+    width: 768px;
+    height: 768px;
+    right: 0%;
+    bottom: -5%;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
 /* Layout */
 .page-container {
     width: 100%;

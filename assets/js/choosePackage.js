@@ -24,7 +24,7 @@ packages.packageData = [{
 // Called by the package selection screen
 packages.handlePackageClicked = function(index) {
     // Grab the containers needed
-    var infoContainer = document.getElementById("package-info-container");
+    /*var infoContainer = document.getElementById("package-info-container");
     var packageContainer = document.getElementById("package-container");
 
     // Move the style container up and the info container down
@@ -44,6 +44,7 @@ packages.handlePackageClicked = function(index) {
 
     // Update the arrow offset
     document.getElementById("package-info-container-arrow").style.left = arrowOffset + "px";
+    */
 }
 
 packages.getContrastCheckedColor = function(hex) {	
