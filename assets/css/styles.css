@@ -35,12 +35,16 @@
 	width: inherit;
 	height: inherit;
     border-radius: inherit;
-    box-shadow: #00000014 0px 7px 13px 0px;
+    box-shadow: var(--slight-shadow);
+}
+
+.style-container>.style>.style-img:hover {
+    transform: scale(1.1) !important;
 }
 
 .style-container>.style:hover {
-	/*box-shadow: inset black 0 0 15px 6px;*/
-	transform: scale(1.1);
+	box-shadow: var(--slight-shadow-darker);
+	/*transform: scale(1.1);*/
 }
 
 .style-info-container {

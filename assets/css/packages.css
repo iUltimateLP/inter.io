@@ -24,13 +24,13 @@
 	border: 1px solid white;
 	padding: 0px;
 	transition: linear var(--anim-fast) transform;
-    box-shadow: #00000014 0px 7px 13px 0px;
+    box-shadow: var(--slight-shadow);
     /*border-radius: 50%;*/
 }
 
 .package-container>.package:hover {
 	transform: scale(1.1);
-	box-shadow: #00000052 0px 7px 13px 0px;
+	box-shadow: var(--slight-shadow-darker);
 }
 
 .package-container>.package>.package-img {

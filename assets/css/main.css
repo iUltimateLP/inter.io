@@ -16,6 +16,9 @@
     --anim-fast: 0.1s;
     --anim-medfast: 0.2s;
 	--anim-medium: 0.25s;
+
+	--slight-shadow: #00000014 0px 7px 13px 0px;
+	--slight-shadow-darker: #00000052 0px 7px 13px 0px;
 }
 
 /* General */
