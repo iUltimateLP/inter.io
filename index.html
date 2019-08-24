@@ -25,6 +25,7 @@
 		<link rel="stylesheet" href="assets/css/info.css">
 		<link rel="stylesheet" href="assets/css/styles.css">
 		<link rel="stylesheet" href="assets/css/packages.css">
+		<link rel="stylesheet" href="assets/css/customization.css">
 		<link rel="stylesheet" href="assets/css/responsive.css">
 
         <!-- Favicon -->
@@ -185,6 +186,60 @@
 			</div>
 			<div class="page-container">
 				<h2 class="page-heading">Want to customize something?</h2>
+				<div class="customize-container">
+					<div class="left">
+						<img class="customize-preview" src="assets/img/shelf-placeholder.png">
+					</div>
+					<div class="right">
+						<div class="customize-parameters">
+							<div class="slot">
+								<div class="slot-texts">
+									<p class="slot-title" id="param-title-1">Parameter Name</p>
+									<p class="slot-desc" id="param-desc-1">Parameter Description</p>
+								</div>
+								<div class="slot-input">
+									<div class="switch" onclick="customization.toggleSwitch(0, event);">
+										<div class="switch-thumb"></div>
+									</div>
+								</div>
+							</div>
+							<div class="slot">
+								<div class="slot-texts">
+									<p class="slot-title" id="param-title-2">Parameter Name</p>
+									<p class="slot-desc" id="param-desc-2">Parameter Description</p>
+								</div>
+								<div class="slot-input">
+									<div class="switch" onclick="customization.toggleSwitch(1, event);">
+										<div class="switch-thumb"></div>
+									</div>
+								</div>
+							</div>
+							<div class="slot">
+								<div class="slot-texts">
+									<p class="slot-title" id="param-title-3">Parameter Name</p>
+									<p class="slot-desc" id="param-desc-3">Parameter Description</p>
+								</div>
+								<div class="slot-input">
+									<div class="switch" onclick="customization.toggleSwitch(2, event);">
+										<div class="switch-thumb"></div>
+									</div>
+								</div>
+							</div>
+							<div class="slot">
+								<div class="slot-texts">
+									<p class="slot-title" id="param-title-4">Parameter Name</p>
+									<p class="slot-desc" id="param-desc-4">Parameter Description</p>
+								</div>
+								<div class="slot-input">
+									<div class="number">
+										<div class="number-button decrease" onclick="customization.decreaseNumber(3);"><p>&minus;</p></div>
+										<div class="number-button increase" onclick="customization.increaseNumber(3);"><p>+</p></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 				<div class="arrow-container" style="top: 490vh;">
 					<a class="fa fa-chevron-down" href="#page5"></a>
 				</div>
@@ -211,6 +266,7 @@
 		<!-- Scripts -->
 		<script src="assets/js/chooseStyle.js"></script>
 		<script src="assets/js/choosePackage.js"></script>
+		<script src="assets/js/customization.js"></script>
 		<script src="assets/js/anim.js"></script>
 		<script src="assets/js/main.js"></script>
     </body>

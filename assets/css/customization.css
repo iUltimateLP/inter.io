@@ -1,0 +1,126 @@
+/*
+    inter.io
+    Gestaltung II Projekt - HS Bremen - Andreas Teufel
+    Jonathan Verbeek
+    David Bollmann
+*/
+
+.customize-container {
+    justify-content: center;
+    display: flex;
+    padding-top: 8%; 
+}
+
+.customize-container>.left {
+    float: left;
+    padding-right: 2%;
+}
+
+.customize-container>.right {
+    float: right;
+    max-width: 512px;
+}
+
+.customize-preview {
+    width: 512px;
+	height: 512px;
+    border: 1px solid white;
+    box-shadow: var(--slight-shadow);
+}
+
+.customize-parameters {
+
+}
+
+.customize-parameters>.slot {
+    display: flex;
+    margin-bottom: 1.5em;
+}
+
+.customize-parameters>.slot>.slot-texts {
+    min-width: 15em;
+}
+
+.customize-parameters>.slot>.slot-texts>.slot-title {
+    margin: 0;
+    font-size: 16pt;
+    font-weight: 100;
+    text-align: left;
+}
+
+.customize-parameters>.slot>.slot-texts>.slot-desc {
+    margin: 0;
+    font-size: 12pt;
+    color: #eaeaea;
+    font-weight: 100;
+    text-align: left;
+    margin-top: 0.4em;
+}
+
+.customize-parameters>.slot>.slot-input {
+    margin-top: 0.4em;
+}
+
+.switch {
+    width: 64px;
+    height: 32px;
+    background-color: #e6e6e6;
+    box-shadow: inset #0000001f 0 0 8px 0;
+    border-radius: 16px;
+    transition: linear 0.1s background-color;
+}
+
+.switch>.switch-thumb {
+    width: 32px;
+    height: 32px;
+    background-color: #ffffff;
+    box-shadow: #00000042 2px 0 4px 0px;
+    border-radius: 50%;
+    transition: linear 0.1s margin-left;
+    pointer-events: none;
+}
+
+.switch.active {
+    background-color: #565d58;
+}
+
+.switch>.switch-thumb.active {
+    margin-left: 32px;
+    box-shadow: #00000042 -2px 0 4px 0px;
+}
+
+.number {
+    width: 64px;
+    height: 32px;
+    display: flex;
+}
+
+.number>.number-button {
+    width: 32px;
+    height: 32px;
+    background-color: #e6e6e6;
+    color: #565d58;
+    transition: linear 0.1s background-color;
+}
+
+.number>.number-button>p {
+    margin: 0;
+    margin-top: 2px;
+    font-weight: 600;
+    pointer-events: none;
+    user-select: none;
+}
+
+.number>.number-button:hover {
+    background-color: #565d58;
+    color: white;    
+}
+
+.number>.number-button.decrease {
+    border-radius: 16px 0 0 16px;
+    border-right: 1px solid #ff6c61;
+}
+
+.number>.number-button.increase {
+    border-radius: 0 16px 16px 0;
+}
