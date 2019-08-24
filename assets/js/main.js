@@ -39,9 +39,13 @@ interio.updateNavbar = function() {
         }
     }
 
-    // Bring in the styles if we reach that page and didn't animate yet
+    // Bring in the intro animations if we reach that page and didn't animate yet
     if (anims.didAnimateStyles !== true && currentSectionIndex == 2) {
         anims.styles();
+    }
+    
+    if (anims.didAnimatePackages !== true && currentSectionIndex == 3) {
+        anims.packages();
     }
 }
 

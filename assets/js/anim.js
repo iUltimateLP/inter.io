@@ -66,3 +66,35 @@ anims.styles = function() {
     anims.didAnimateStyles = true;
 }
 
+// Runs a animation step of a package
+anims.packageAnimStep = function(idx) {
+    var packages = document.getElementsByClassName("package");
+
+    // This timeout delays every animation by idx*100, which means every circle is 100ms apart from the others, to make the animation fluid
+    setTimeout(function() {
+        var package = packages.item(idx);
+
+        var offset = -20 * (3 - idx + 1);
+
+        package.style.transform = "translateY(" + offset + "px)";
+        package.style.opacity = "0";
+
+        setTimeout(function() {    
+            /*package.style.transitionProperty = "transform";
+            package.style.transitionDuration = "0.2s";*/
+            package.style.transform = "translateY(0px)";
+            package.style.opacity = "1";
+        }, 200);
+    }, idx * 50);
+}
+
+// Runs the package screen intro animation
+anims.packages = function() {
+    anims.packageAnimStep(0);
+    anims.packageAnimStep(1);
+    anims.packageAnimStep(2);
+    anims.packageAnimStep(3);
+
+    anims.didAnimatePackages = true;
+}
+

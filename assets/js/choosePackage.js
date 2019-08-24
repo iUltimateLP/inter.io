@@ -84,9 +84,12 @@ packages.selectColorOptions = function(index) {
     var colors = document.getElementsByClassName("package-color");
     for (var i = 0; i < colors.length; i++) {
         var checkmark = colors.item(i).children[0];
+        var parentPackage = colors.item(i).parentElement.parentElement; // The hirarchy is package-color > package-color-container > package
         
         checkmark.classList.remove("selected");
+        parentPackage.classList.remove("selected");
     }
 
+    colors.item(index).parentElement.parentElement.classList.add("selected");
     colors.item(index).children[0].classList.add("selected");
 }

@@ -23,14 +23,21 @@
     height: 256px;
 	border: 1px solid white;
 	padding: 0px;
-	transition: linear var(--anim-fast) transform;
+	transition: linear var(--anim-fast) transform, opacity;
     box-shadow: var(--slight-shadow);
     /*border-radius: 50%;*/
+    opacity: 0;
 }
 
 .package-container>.package:hover {
-	transform: scale(1.1);
+    /*transform: scale(1.1);*/
+    transform: translateY(-10%) !important;
 	box-shadow: var(--slight-shadow-darker);
+}
+
+.package-container>.package.selected {
+    transform: translateY(-10%) !important;
+    box-shadow: var(--slight-shadow-darker);
 }
 
 .package-container>.package>.package-img {
@@ -105,10 +112,16 @@
 
 .package-color-container {
 	position: relative;
-    margin-top: 105%;
+    margin-top: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-right: 6px; /* For anim it's -20px */
+    transition: linear 0.1s margin-right;
+}
+
+.package-color-container:hover {
+    /*margin-right: 6px;*/
 }
 
 .package-color-container>.package-color {
@@ -119,7 +132,8 @@
 	box-shadow: #00000014 0px 7px 8px 0px;
     position: relative;
     border-radius: 50%;
-    margin-right: 6px;
+    margin-right: inherit;
+    margin-top: 5%;
 }
 
 .package-color-container>.package-color>i {
