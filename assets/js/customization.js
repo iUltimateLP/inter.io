@@ -62,19 +62,37 @@ customization.toggleSwitch = function(index, mouseEvent) {
 }
 
 customization.decreaseNumber = function(index) {
-    customization.parameters[index].value = customization.parameters[index].value - 1;
+    if (customization.parameters[index].value - 1 >= 0) {
+        customization.parameters[index].value = customization.parameters[index].value - 1;
 
-    var parsedDesc = customization.parameters[index].desc.replace("{value}", customization.parameters[index].value);
+        var parsedDesc = customization.parameters[index].desc.replace("{value}", customization.parameters[index].value);
 
-    document.getElementById("param-desc-" + (index + 1)).innerHTML = parsedDesc;
+        document.getElementById("param-desc-" + (index + 1)).innerHTML = parsedDesc;
+    }
+    
+    document.getElementById("number-increase-" + (index + 1)).classList.remove("disabled");
+    if (customization.parameters[index].value - 1 < 0) {
+        document.getElementById("number-decrease-" + (index + 1)).classList.add("disabled");
+    } else {
+        document.getElementById("number-decrease-" + (index + 1)).classList.remove("disabled");
+    }
 }
 
 customization.increaseNumber = function(index) {
-    customization.parameters[index].value = customization.parameters[index].value + 1;
+    if (customization.parameters[index].value + 1 <= 10) {
+        customization.parameters[index].value = customization.parameters[index].value + 1;
 
-    var parsedDesc = customization.parameters[index].desc.replace("{value}", customization.parameters[index].value);
+        var parsedDesc = customization.parameters[index].desc.replace("{value}", customization.parameters[index].value);
 
-    document.getElementById("param-desc-" + (index + 1)).innerHTML = parsedDesc;
+        document.getElementById("param-desc-" + (index + 1)).innerHTML = parsedDesc;
+    }
+
+    document.getElementById("number-decrease-" + (index + 1)).classList.remove("disabled");
+    if (customization.parameters[index].value + 1 > 10) {
+        document.getElementById("number-increase-" + (index + 1)).classList.add("disabled");
+    } else {
+        document.getElementById("number-increase-" + (index + 1)).classList.remove("disabled");
+    }
 }
 
 customization.populateParameters();

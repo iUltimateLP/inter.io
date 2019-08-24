@@ -103,6 +103,11 @@
     transition: linear 0.1s background-color;
 }
 
+.number>.number-button.disabled {
+    color: #b5b5b5;
+    background-color: #cecece;
+}
+
 .number>.number-button>p {
     margin: 0;
     margin-top: 2px;
@@ -111,7 +116,7 @@
     user-select: none;
 }
 
-.number>.number-button:hover {
+.number>.number-button:not(.disabled):hover {
     background-color: #565d58;
     color: white;    
 }
