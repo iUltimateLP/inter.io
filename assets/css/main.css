@@ -104,7 +104,7 @@ a {
 	height: 28px;
 	margin-top: 0;
 	background-image: url("../img/interio-logo-closed-large.png");
-	background-size: contain;
+    background-size: 28px 28px;
 	background-color: transparent;
 	border-radius: 0;
 }

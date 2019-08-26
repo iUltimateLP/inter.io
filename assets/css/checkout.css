@@ -1,0 +1,141 @@
+/*
+    inter.io
+    Gestaltung II Projekt - HS Bremen - Andreas Teufel
+    Jonathan Verbeek
+    David Bollmann
+*/
+
+.interio-logo-small {
+    background-image: url(../img/interio-logo-large.png);
+    width: 100%;
+    height: 128px;
+    background-repeat: no-repeat;
+    background-size: 128px 128px;
+    background-position: center;
+    margin: 0;
+    margin-top: 1em;
+}
+
+.checkout-container {
+    width: 36%;
+    background-color: #e5e5e5;
+    margin: 0 auto;
+    margin-top: 1.5em;
+    box-shadow: inset #0000002e 0px 3px 6px 0;
+}
+
+.checkout-container>.checkout-arrow {
+    content: " ";
+    position: absolute;
+    margin-top: -64px;
+    margin-left: 15.8%;
+    border-width: 32px;
+    border-style: solid;
+    border-color: transparent transparent #c1c1c1 transparent;
+    transition: var(--anim-fast) linear left;
+}
+
+.checkout-wizard-container {
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-align: center;
+    scroll-snap-type: x mandatory;
+    transition: 0.1s linear all;
+}
+
+.checkout-wizard-container>.checkout-wizard-content {
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.checkout-heading {
+    color: #1f1f1f;
+    font-size: 20pt;
+    font-weight: 400;
+    padding-top: 0.5em;
+}
+
+.checkout-list {
+    margin-top: 1em;
+}
+
+.checkout-list>.item {
+    display: flex;
+    align-items: center;
+    margin-left: 1em;
+    margin-bottom: 1em;
+    margin-right: 1em;
+    transition: linear 0.1s background-color, box-shadow;
+}
+
+.checkout-list>.item:hover {
+    background-color: #c7c7c7;
+    box-shadow: inset #00000029 0 0 6px 0;
+}
+
+.checkout-list>.item>.item-img {
+    background-image: url(../img/shelf-placeholder.png);
+    width: 64px;
+    height: 64px;
+    background-size: 64px 64px;
+}
+
+.checkout-list>.item>.item-img>.item-color {
+    width: 32px;
+    height: 32px;
+    background-color: #d62525;
+    border-radius: 50%;
+    margin-top: 38px;
+    box-shadow: var(--slight-shadow);
+    margin-left: 38px;
+}
+
+.checkout-list>.item>.item-texts {
+    text-align: left;
+    margin-left: 0.5em;
+}
+
+.checkout-list>.item>.item-texts>.item-title {
+    margin: 0;
+    /*font-weight: 100;*/
+    font-size: 16pt;
+    color: #464646;
+}
+
+.checkout-list>.item>.item-texts>.item-data {
+    margin: 0;
+    font-weight: 100;
+    font-size: 12pt;
+    margin-top: 0.3em;
+    color: #585858;
+}
+
+.checkout-list>.item>.item-price {
+    margin-left: auto;
+    margin-right: 1em;
+}
+
+.checkout-list>.item>.item-price>p {
+    margin: 0;
+    color: #464646;
+}
+
+.checkout-wizard-next {
+    color: #1f1f1f;
+    padding-bottom: 1em;
+}
+
+.checkout-wizard-next>i {
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 5px;
+    padding-left: 6px;
+    padding-right: 6px;
+    transition: 0.1s linear background-color, color;
+}
+
+.checkout-wizard-next>i:hover {
+    background-color: #1f1f1f;
+    color: #eeeeee;
+}
