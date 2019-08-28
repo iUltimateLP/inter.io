@@ -256,14 +256,11 @@
 			</div>
 			<div class="page-container">
 				<h2 class="page-heading">Got everything?</h2>
-				<!--<video id="box-closing-anim" width="512" autoplay>
-					<source src="assets/img/interio-box-closing-anim.webm" type="video/webm">
-				</video>-->
 				<div class="interio-logo-small"></div>
 				<div class="checkout-container">
 					<div class="checkout-arrow"></div>
 					<div class="checkout-wizard-container">
-						<div class="checkout-wizard-content">
+						<div class="checkout-wizard-content" id="checkout-wizard-1">
 							<!-- Checkout Wizard: Confirm Your Order -->
 							<h2 class="checkout-heading">Confirm your order</h2>
 							<div class="checkout-list">
@@ -281,20 +278,65 @@
 								</div>
 							</div>
 						</div>
-						<div class="checkout-wizard-content">
+						<div class="checkout-wizard-content noheight" id="checkout-wizard-2">
 							<!-- Checkout Wizard: Shipping Address -->
 							<h2 class="checkout-heading">Where should we ship it?</h2>
-							
+							<div class="shipping-form">
+								<div class="form-line">
+									<div class="form-input">
+										<p class="form-label">First Name <span class="required">*</span></p>
+										<input class="form-input-box"></input>
+									</div>
+									<div class="form-input">
+										<p class="form-label">Last Name <span class="required">*</span></p>
+										<input class="form-input-box"></input>
+									</div>
+								</div>
+								<div class="form-line">
+									<div class="form-input">
+										<p class="form-label">Home Address <span class="required">*</span></p>
+										<input class="form-input-box"></input>
+									</div>
+									<div class="form-input">
+										<p class="form-label">Postal Code <span class="required">*</span></p>
+										<input class="form-input-box" style="width: 4em !important;"></input>
+									</div>
+								</div>
+								<div class="form-line">
+									<div class="form-input">
+										<p class="form-label">Country <span class="required">*</span></p>
+										<select class="form-select">
+											<option>Germany</option>
+											<option>...</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-line">
+									<div class="form-input">
+										<p class="form-label">Phone Number</p>
+										<input class="form-input-box"></input>
+									</div>
+								</div>
+								<div class="form-line">
+									<p class="form-label"><span class="required">*</span> Required</p>
+								</div>
+							</div>
 						</div>
-						<div class="checkout-wizard-content">
+						<div class="checkout-wizard-content noheight" id="checkout-wizard-3">
 							<!-- Checkout Wizard: Payment -->
 							<h2 class="checkout-heading">How do you want to pay?</h2>
+							<div id="paypal-buttons"></div>
 						</div>
 					</div>
 					<div class="checkout-wizard-next">
-						<i class="fa fa-arrow-right" onclick="checkout.nextWizardStep();"></i>
+						<i id="checkout-wizard-prev" class="fa fa-arrow-left disabled" onclick="checkout.previousWizardStep();"></i>
+						<i id="checkout-wizard-next" class="fa fa-arrow-right" onclick="checkout.nextWizardStep();"></i>
 					</div>
 				</div>
+				<h3 id="thanks-for-order" style="opacity: 0;">Thanks for your order! You will be redirected...</h2>
+				<video id="box-closing-anim" width="0">
+					<source src="assets/img/interio-box-closing-anim.webm" type="video/webm">
+				</video>
 				<div class="footer" style="top: 594vh;">
 					<div class="footer-container">
 						<i class="fa fa-code"></i>  with  <i class="fa fa-heart"></i>  in Bremen
@@ -310,5 +352,37 @@
 		<script src="assets/js/checkout.js"></script>
 		<script src="assets/js/anim.js"></script>
 		<script src="assets/js/main.js"></script>
+
+		<!-- PayPal Fake Payment Integration -->
+		<script src="https://www.paypal.com/sdk/js?client-id=sb"></script>
+		<script>
+			paypal.Buttons({
+				createOrder: function(data, actions) {
+					return actions.order.create({
+						purchase_units: [{
+						amount: {
+							value: '49.99'
+						}
+						}]
+					});
+					},
+				onCancel: function (data) {
+					console.log("onCancel");
+					document.getElementsByClassName("checkout-container").item(0).classList.add("noheight");
+					document.getElementsByClassName("checkout-container").item(0).style.opacity = 0;
+					document.getElementById("box-closing-anim").width = "512";
+					document.getElementById("box-closing-anim").play();
+					document.getElementById("box-closing-anim").onended = function() {
+						document.getElementById("box-closing-anim").width = "0";
+					}
+					document.getElementsByClassName("interio-logo-small").item(0).style.opacity = 0;
+					document.getElementById("thanks-for-order").style.opacity = 1;
+					setTimeout(function() {
+						window.location.hash = "page0";
+						window.location.reload();
+					}, 3500);
+				}
+			}).render('#paypal-buttons');
+		</script>
     </body>
 </html>
