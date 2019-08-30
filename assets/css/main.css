@@ -30,7 +30,9 @@ body {
 
     font-family: 'Montserrat', sans-serif;
     color: white;
-    font-size: 18pt;
+	font-size: 18pt;
+	
+	user-select: none;
 }
 
 section {
