@@ -28,17 +28,14 @@
 
 .info-container {
     justify-content: center;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     padding-top: 8%;
-}
-
-.info-container>.left {
-    float: left;
-    padding-right: 2%;
+    padding-left: 8%;
+    padding-right: 8%;
 }
 
 .info-container>.right {
-    float: right;
     max-width: 512px;
 }
 

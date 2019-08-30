@@ -5,7 +5,7 @@
     David Bollmann
 */
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1240px) {
     .deco-container {
         display: none;
     }
@@ -25,5 +25,40 @@
     .style-container>.style {
         width: 200px;
         height: 200px;
+    }
+
+    .info-container {
+        grid-template-columns: repeat(1, 1fr);
+        padding-top: 2%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .info-container>.right {
+        justify-self: center;
+    }
+
+    .package-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .customize-preview {
+        width: 384px;
+        height: 384px;
+    }
+
+    .customize-container {
+        grid-template-columns: repeat(1, 1fr);
+        padding-top: 2%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .customize-container>.right {
+        justify-self: center;
+    }
+
+    .checkout-container {
+        width: 50%;
     }
 }
