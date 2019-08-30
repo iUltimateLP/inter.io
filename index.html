@@ -70,11 +70,15 @@
 				<h2 class="page-heading">What's inter.io?</h2>
 				<div class="info-container">
 					<div class="left">
-						<img class="info-img" src="assets/img/placeholder.png">
+						<img class="info-img" src="assets/img/hocker02.jpg">
 					</div>
 					<div class="right">
-						<p class="info-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident nostrum blanditiis dolore in error ducimus beatae. Assumenda velit excepturi animi nesciunt quo iure aspernatur fugiat, dicta amet! Aliquid, repellendus eligendi!
-							<br/><a href="about.html">Want to know more?</a>
+						<p class="info-text">
+							Inter.io was founded on the premise of bringing simple and fun do-it-yourself furniture straight to your door step.<br/><br/>
+							We believe anyone with a few tools can build awesome pieces of furniture right in their own home.<br/><br/>
+							Not only that but our goal is to spark creativity in our customers to experiment with out products and come up with their own unique pieces for their homes.<br/><br/>
+							We offer a variety of different styles and look to constantly increase our line of minimalistic home furniture.
+							<a href="about.html">Want to know more?</a>
 						</p>
 					</div>
 				</div>
@@ -97,19 +101,22 @@
 						<svg class="progress-ring" height="264" width="264" overflow="visible">
 							<circle class="progress-ring-circle" stroke="white" stroke-width="2" fill="transparent" r="138" cx="128" cy="128"/>
 						</svg>
-						<img class="style-img" src="assets/img/placeholder.png" onclick="styles.handleStyleClicked(0);">
+						<img class="style-img" src="assets/img/placeholder.png" onclick="styles.handleStyleClicked(event, 0);" onmouseover="styles.handleStyleHoverIn(0);" onmouseout="styles.handleStyleHoverOut(0);">
+						<h2 id="style-label-0">Vintage</h2>
 					</div>
 					<div class="style">
 						<svg class="progress-ring" height="264" width="264" overflow="visible">
 							<circle class="progress-ring-circle" stroke="white" stroke-width="2" fill="transparent" r="138" cx="128" cy="128"/>
 						</svg>
-						<img class="style-img" src="assets/img/placeholder.png" onclick="styles.handleStyleClicked(1);">
+						<img class="style-img" src="assets/img/placeholder.png" onclick="styles.handleStyleClicked(event, 1);" onmouseover="styles.handleStyleHoverIn(1);" onmouseout="styles.handleStyleHoverOut(1);">
+						<h2 id="style-label-1">Modern</h2>
 					</div>
 					<div class="style">
 						<svg class="progress-ring" height="264" width="264" overflow="visible">
 							<circle class="progress-ring-circle" stroke="white" stroke-width="2" fill="transparent" r="138" cx="128" cy="128"/>
 						</svg>
-						<img class="style-img" src="assets/img/placeholder.png" onclick="styles.handleStyleClicked(2);">
+						<img class="style-img" src="assets/img/placeholder.png" onclick="styles.handleStyleClicked(event, 2);" onmouseover="styles.handleStyleHoverIn(2);" onmouseout="styles.handleStyleHoverOut(2);">
+						<h2 id="style-label-2">Clean</h2>
 					</div>
 				</div>
 				<div class="style-info-container" id="style-info-container">
@@ -133,7 +140,7 @@
 				<h2 class="page-heading">Pick what you need!</h2>
 				<div class="package-container" id="package-container">
 					<div class="package">
-						<img class="package-img" src="assets/img/placeholder.png" onclick="packages.handlePackageClicked(0);">
+						<img class="package-img" src="assets/img/hocker03.jpg" onclick="packages.handlePackageClicked(0);">
 						<!--<div class="package-overlay">
 							<i class="fa fa-search"></i>
 						</div>-->
@@ -189,7 +196,7 @@
 				<h2 class="page-heading">Want to customize something?</h2>
 				<div class="customize-container">
 					<div class="left">
-						<img class="customize-preview" src="assets/img/shelf-placeholder.png">
+						<img class="customize-preview" src="assets/img/hocker04.jpg">
 					</div>
 					<div class="right">
 						<div class="customize-parameters">
@@ -362,12 +369,11 @@
 						purchase_units: [{
 						amount: {
 							value: '49.99'
-						}
-						}]
+						}}]
 					});
-					},
+				},
 				onCancel: function (data) {
-					console.log("onCancel");
+					// Play the animation, hide the checkout elements and reload the page as this is just a prototype
 					document.getElementsByClassName("checkout-container").item(0).classList.add("noheight");
 					document.getElementsByClassName("checkout-container").item(0).style.opacity = 0;
 					document.getElementById("box-closing-anim").width = "512";
@@ -380,7 +386,7 @@
 					setTimeout(function() {
 						window.location.hash = "page0";
 						window.location.reload();
-					}, 3500);
+					}, 4000);
 				}
 			}).render('#paypal-buttons');
 		</script>

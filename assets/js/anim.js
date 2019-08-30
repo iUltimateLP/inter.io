@@ -42,7 +42,7 @@ anims.styleAnimStep = function(idx) {
             circle.style.strokeDashoffset = 0;
             
             // Also animate and scale up the inner image
-            img.style.transitionProperty = "transform";
+            img.style.transitionProperty = "transform, filter";
             img.style.transitionDuration = "0.2s";
             img.style.transform = "scale(1.1)";
 

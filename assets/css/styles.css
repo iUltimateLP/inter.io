@@ -27,6 +27,16 @@
     transition: var(--anim-fast) linear transform;
 }
 
+.style-container>.style>h2 {
+    position: absolute;
+    top: 42%;
+    width: inherit;
+    height: inherit;
+    pointer-events: none;
+    opacity: 0;
+    transition: var(--anim-fast) linear opacity;
+}
+
 .style-container>.style>img {
     transform: scale(0);
 }
@@ -40,11 +50,22 @@
 
 .style-container>.style>.style-img:hover {
     transform: scale(1.1) !important;
+    filter: brightness(0.6);
+}
+
+.style-container>.style>.style-img.selected {
+    transform: scale(1.1) !important;
+    filter: brightness(0.6);
 }
 
 .style-container>.style:hover {
 	box-shadow: var(--slight-shadow-darker);
 	/*transform: scale(1.1);*/
+}
+
+.style-container>.style.selected {
+    box-shadow: var(--slight-shadow-darker);
+	/*transform: scale(1.1);*/   
 }
 
 .style-info-container {
