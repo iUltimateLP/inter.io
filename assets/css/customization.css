@@ -71,8 +71,9 @@
     background-color: #ffffff;
     box-shadow: #00000042 2px 0 4px 0px;
     border-radius: 50%;
-    transition: linear 0.1s margin-left;
+    transition: linear 0.1s margin-left, transform;
     pointer-events: none;
+    transform: scale(1.1);
 }
 
 .switch.active {

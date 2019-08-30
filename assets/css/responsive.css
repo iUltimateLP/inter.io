@@ -5,6 +5,7 @@
     David Bollmann
 */
 
+/* Tablet and/or small desktop screens */
 @media screen and (max-width: 1240px) {
     .deco-container {
         display: none;
@@ -63,11 +64,12 @@
     }
 }
 
+/* Tablets */
 @media screen and (max-width: 850px) {
     h2.page-heading {
         padding-top: 8%;
     }
-    
+
     .info-img {
         width: 384px;
         height: 384px;
@@ -84,5 +86,50 @@
 
     .checkout-container {
         width: 70%;
+    }
+}
+
+/* Smartphones */
+@media screen and (max-width: 450px) {
+    section {
+        height: 100vh;
+        min-height: -webkit-fill-available;
+    }
+
+    h2.page-heading {
+        padding-top: 12%;
+    }
+
+    .info-container>.right {
+        padding-top: 0.5em;
+        max-width: 90%;
+    }
+
+    .package-container {
+        overflow: scroll;
+        height: 75%;
+        box-shadow: inset 0 -8px 8px -8px #0000007a;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .customize-container>.right {
+        max-width: 90%;
+    }
+
+    .customize-parameters>.slot>.slot-texts {
+        min-width: 12em;
+    }
+
+    .checkout-container {
+        width: 100%;
+    }
+
+    .checkout-list>.item {
+        margin-left: 0.2em;
+        margin-right: 0.2em;
+    }
+
+    .checkout-list>.item>.item-price {
+        margin-right: 0;
     }
 }
