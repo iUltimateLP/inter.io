@@ -26,7 +26,8 @@ interio.updateNavbar = function() {
     var navbar = document.getElementById("navbar-container");
 
     // Decide which section the user is in by looking at the scroll offset
-    var currentSectionIndex = Math.floor((window.pageYOffset / document.body.getBoundingClientRect().height) * 6);
+    var offsetCorrection = 100;
+    var currentSectionIndex = Math.floor(((window.pageYOffset + offsetCorrection) / document.body.getBoundingClientRect().height) * 6);
 
     // Update all navbar items to be active if they are below the current section
     for (var i = 0; i < navbar.children.length; i++) {

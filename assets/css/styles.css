@@ -55,7 +55,7 @@
 
 .style-container>.style>.style-img.selected {
     transform: scale(1.1) !important;
-    filter: brightness(0.6);
+    filter: brightness(0.4);
 }
 
 .style-container>.style:hover {
