@@ -28,11 +28,10 @@
     opacity: 1;
 }
 
-.checkout-container>.checkout-arrow {
+.checkout-arrow {
     content: " ";
     position: absolute;
-    margin-top: -64px;
-    margin-left: 15.8%;
+    margin-top: -1.15em;
     border-width: 32px;
     border-style: solid;
     border-color: transparent transparent #c1c1c1 transparent;

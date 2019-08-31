@@ -55,4 +55,12 @@ window.onscroll = function() {
     interio.updateNavbar();
 }
 
+// Hook the onresize to update certain elements
+window.onresize = function() {
+    var checkoutArrowOffset = (document.getElementById("checkout-interio-logo").getBoundingClientRect().width / 2) - 32;
+
+    document.getElementsByClassName("checkout-arrow")[0].style.marginLeft = checkoutArrowOffset + "px";
+}
+
+window.onresize();
 interio.smoothScrollWorkaround();
